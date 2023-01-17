@@ -83,16 +83,73 @@ textarea {
 
 /* General Styles */
 
-html {
-  font-size: 16px;
-
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 1rem;
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   color: black;
   text-align: left;
+}
+
+.content-wrapper {
+  margin: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-branding-container {
+  width: 50%;
+}
+
+.nav-branding {
+  font-family: 'Shrikhand', cursive;
+  color: #d68400;
+  font-size: 2rem;
+  letter-spacing: .05rem;
+  cursor: pointer;  
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #d68400;
+}
+
+.header-btn {
+  background: #d68400;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+.tagline {
+  position: absolute;
+  top: 190px;
+  left: 50px;
+}
+
+img {
+  width: 100%;
 }
 
 
