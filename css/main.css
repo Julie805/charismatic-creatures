@@ -96,8 +96,8 @@ body {
   text-align: left;
 }
 
-.content-wrapper {
-  margin: 30px;
+.content-wrapper-header, .content-wrapper-main {
+  padding: 30px;
 }
 
 nav {
@@ -118,6 +118,7 @@ nav {
   letter-spacing: .05rem;
   cursor: pointer;  
   text-decoration: none;
+  line-height: 1.5rem;
 }
 
 .nav-menu {
@@ -140,16 +141,50 @@ nav {
   width: 100%;
   text-align: center;
   padding: 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .tagline {
   position: absolute;
-  top: 190px;
-  left: 50px;
+  top: 180px;
+  left: 30px;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
 }
 
 img {
   width: 100%;
+  
+}
+
+.content-wrapper-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px; 
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.hero-area {
+  background: #d68400;
+  padding: 30px 0;
+}
+
+.hero-btn {
+  border: none;
+  border-radius: 7px;
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-weight: 700;
 }
 
 
