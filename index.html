@@ -16,13 +16,13 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">	
-  <!-- FontAwesome CDN version 5.5 -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shrikhand&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">	
+
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -50,27 +50,66 @@
     </div>
       <h3 class="header-btn">Get Directions</h3>
       <h2 class="tagline">Pets. Feeders. Supplies.</h2>
-      <img src="./img/chameleon.png"/>
+      <img class="header-img" src="./img/chameleon.png"/>
   </header>
 
   <main>
-    <section class="hero-area">
+    <section class="hero-section">
       <div class="content-wrapper-main">
         <h2 class="title">Ventura's Most Unique Pet Store</h2>
         <p>We love to spark appreciation for all living things — especially the ones that may seem a little bit different.</p>
         <button class="hero-btn">Our Story</button>
       </div>
     </section>
-    <section class="services">
+    <section class="services-section">
       <div class="content-wrapper-main">
         <h2 class="title">Services</h2>
-        <p>Reptiles & Amphibians</p>
-        <p>Birds</p>
-        <p>Pet Supplies (including for furry friends)</p>
-        <p>Pet Health & Wellness</p>
-        <p>Feeders</p>
-        <p>Adoptions</p>
-        
+        <p>Supporting the health and wellness of reptiles, amphibians, tropical fish, dogs, cats, rodents, arachnids, and more!</p>
+        <div class="services-container">
+          <div class="single-service">
+            <img class="services-icons" src="./img/dove.svg" alt="bird icon"/>
+            <p class="services-text">Unique pets</p>
+          </div>
+          <div class="single-service">
+            <img class="services-icons" src="./img/bowl-rice.svg" alt="pet food in a bowl icon"/>
+            <p class="services-text">Pet Food & Supplies </p>
+          </div>
+          <div class="single-service">
+            <img class="services-icons" src="./img/bugs.svg" alt="two bugs icon"/>
+            <p class="services-text">Feeders</p>
+          </div>
+          <div class="single-service">
+            <img class="services-icons" src="./img/book-open-reader.svg" alt="open book icon"/>
+            <p class="services-text">On-site education</p>
+          </div>
+          <div class="single-service">
+            <img class="services-icons" src="./img/cat.svg" alt="cat icon"/>
+            <p class="services-text">Adoptions</p>
+          </div>
+          <div class="single-service">
+            <img class="services-icons" src="./img/car-side.svg" alt="car icon"/>
+            <p class="services-text">Free Parking</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <img class="body-img" src="./img/lizard.png"/>
+    </section>
+    <section>
+      <div class="content-wrapper-main">
+        <h2 class="title">Contact Us</h2>
+        <p>Please fill out all of the fields</p>
+
+        <form>
+          <label for="name">Name*</label>
+          <input type="text" id="name" placeholder="Enter your name" aria-label="name" required>
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" placeholder="Enter your email" aria-label="email" required>
+          <label for="inquiry">How can we help?*</label>
+          <textarea id="inquiry" placeholder="Type your inquiry here" aria-label="inquiry" required></textarea>
+          <button>Submit</button>
+        </form>
       </div>
     </section>
   </main>
