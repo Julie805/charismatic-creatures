@@ -96,10 +96,16 @@ body {
   text-align: left;
 }
 
+.img {
+  max-width: 100%;
+}
 .content-wrapper-header, .content-wrapper-main {
   padding: 30px;
 }
 
+header { 
+  background: white;
+}
 
 nav {
   display: flex;
@@ -125,6 +131,7 @@ nav {
 .nav-menu {
   display: none;
 }
+
 
 .bar {
   display: block;
@@ -220,6 +227,25 @@ p {
 }
 
 .body-img {
+  width: 100%;
+}
+
+.hours {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+}
+
+.hours_column1 p {
+  text-align: left; 
+}
+
+.hours_column2 p {
+  text-align: right; 
+}
+
+form {
+  display: grid;
   width: 100%;
 }
 
