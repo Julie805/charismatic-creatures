@@ -215,7 +215,7 @@ p {
 }
 
 .services-icons {
-  width: 200px;
+  width: 100px;
   filter: invert(51%) sepia(79%) saturate(1334%) hue-rotate(8deg) brightness(92%) contrast(102%);
 }
 
