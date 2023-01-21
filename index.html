@@ -16,6 +16,9 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+   <!-- Font Awesome CDN -->
+   <script src="https://kit.fontawesome.com/6161d93014.js" crossorigin="anonymous"></script>
+
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shrikhand&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">
@@ -34,6 +37,7 @@
     <div class="content-wrapper-header">
       <nav>
         <div class="nav-branding-container">
+          <img class="nav-logo" src="./img/lizard-logo.svg"/>
           <a href="index.html" class="nav-branding">charismatic creatures</a>
         </div> 
         <ul class="nav-menu">
@@ -48,13 +52,14 @@
         </div>
       </nav>
     </div>
-    <h3 class="header-btn">Get Directions</h3>
+    <h3 class="directions-btn">Get Directions</h3>
   </header>
 
   <main>
     <section>
+      <!-- <hr class="tagline-line"> -->
       <h2 class="tagline">Pets. Feeders. Supplies.</h2>
-      <img class="header-img" src="./img/chameleon-sq.png"/>
+      <img class="header-img" src="./img/chameleon-sq2.jpg"/>
     </section>
     <section class="hero-section">
       <div class="content-wrapper-main">
@@ -70,7 +75,7 @@
         <div class="services-container">
           <div class="single-service">
             <img class="services-icons" src="./img/dove.svg" alt="bird icon"/>
-            <p class="services-text">Unique pets</p>
+            <p class="services-text">Novel pets</p>
           </div>
           <div class="single-service">
             <img class="services-icons" src="./img/bowl-rice.svg" alt="pet food in a bowl icon"/>
@@ -102,7 +107,7 @@
       <div class="content-wrapper-main">
         <h2 class="title">Store Information</h2>
         <!-- Placeholder text - Insert javascript here -->
-        <p>Open Now - Closes at 7:30 PM today</p>
+        <p id="open-status"><span>Open Now</span> - Closes at 7:00 PM today</p>
         <div class="hours">
           <div class="hours_column1">
             <p>Monday<br>
@@ -125,19 +130,25 @@
               </p>
           </div>
         </div>
-        <p>ADDRESS<br>2311 Pierpont Blvd. <br>Ventura, CA 93001</p>
-        <p>PHONE<br>(805) 868-8382</p>
-        <p>EMAIL<br>charismaticcreatures@gmail.com</p>
+        <div class="contact-info"> 
+          <h4>2311 Pierpont Blvd. <br>Ventura, CA 93001</h4>
+          <h4>(805) 868-8382</h4>
+        </div>
+        <button class="contact-btn">Contact Us</button>
       </div>
-
+      <h3 class="directions-btn">Get Directions</h3>  
     </section>
   </main>
 
   <footer>
-    <h3 class="header-btn">Get Directions</h3>
-    <div class="content-wrapper">   
+    <div class="content-wrapper-main">   
+      <div class="social-container">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
       <div class="copyright">
         <p>Copyright 2023 | Charismatic Creatures</p>
+        <p>Design by MorrisDev</p>
       </div>
     </div>
   </footer>
