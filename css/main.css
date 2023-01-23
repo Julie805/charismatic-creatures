@@ -369,6 +369,10 @@ textarea {
   text-transform: uppercase;
 }
 
+.about-text p {
+  text-align: left;
+}
+
 
 
 
