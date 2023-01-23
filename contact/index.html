@@ -13,8 +13,10 @@
   <meta property="og:image" content="">
 
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="apple-touch-icon" href="../icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" href="../favicon.ico">
+
+   <!-- Font Awesome CDN -->
+   <script src="https://kit.fontawesome.com/6161d93014.js" crossorigin="anonymous"></script>
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shrikhand&display=swap" rel="stylesheet">
@@ -28,8 +30,6 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
   <header>
     <div class="content-wrapper-header">
       <nav>
@@ -51,11 +51,15 @@
     </div>
     <h3 class="directions-btn"></h3>
   </header>
-
+  <section>
+    <!-- <hr class="tagline-line"> -->
+    <h2 class="tagline contact-tagline">Visit us</h2>
+    <img class="header-img" src="../img/storefront.jpeg"/>
+    <h3 class="directions-btn"></h3>
+  </section>
   <section class="map">
     <figure>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.264848877189!2d-88.42986248453636!3d42.59212397917199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88058bbbacb5568f%3A0xac5d9a1fbeb32534!2s333+W+Main+St%2C+Lake+Geneva%2C+WI+53147!5e0!3m2!1sen!2sus!4v1541558469187"
-        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.3919774872375!2d-119.2717313!3d34.264055400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e9ad0566ac053d%3A0x2da389d17b87870a!2sCharismatic%20Creatures!5e0!3m2!1sen!2sus!4v1674498911894!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </figure>
   </section>
 
@@ -71,10 +75,15 @@
         <input type="email" id="email" placeholder="Enter your email" aria-label="email" required>
         <label for="inquiry">How can we help?*</label>
         <textarea id="inquiry" placeholder="Type your inquiry here" aria-label="inquiry" required></textarea>
-        <button>Submit</button>
+        <button id="submit-btn" type="submit">Submit</button>
       </form>
+      <div class="contact-info"> 
+        <h4>(805) 868-8382</h4>
+        <h4>2311 Pierpont Blvd. <br>Ventura, CA 93001</h4>  
+      </div>
     </div>
   </section>
+  
 </body>
 
 <footer>

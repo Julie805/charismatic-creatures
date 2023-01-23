@@ -3,11 +3,8 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Julie Morris> -- <Front End Developerr> -- <twitter @greenjules>
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
