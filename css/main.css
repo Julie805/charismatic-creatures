@@ -110,12 +110,12 @@ body {
     align-items: center; 
     gap: 10px; 
     padding: 40px 20px;
-
 }
 
 header { 
   background: white;
 }
+
 
 nav {
   display: flex;
@@ -124,6 +124,7 @@ nav {
   margin-bottom: 10px;
 }
 
+/* logo design */
 .nav-branding-container {
   width: 40%;
   display: flex;
@@ -148,10 +149,65 @@ nav {
   line-height: 1rem;
 }
 
-.nav-menu {
-  display: none;
+/* Style navigation menu and links */
+.nav-menu {   
+  position: fixed;
+  /* left value hides the nav-menu items until activated */
+  right: -100%;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 50px 25px;
+  background-color:#c8f9f0;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05rem; 
+  transition: 0.3s;
 }
 
+/* reveals the nav-menu items with JavaScript */
+.nav-menu.active {
+  right: 0;
+}
+
+/* transition effect*/
+.nav-link {
+  transition: 0.7s ease;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #10b1a1;
+  
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+/* removes the middle line of the hamburger with JavaScript */
+.hamburger.active .bar:nth-child(2){
+  opacity: 0;
+}
+
+/* rotates first line of hamburger with JavaScript */
+.hamburger.active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+
+/* rotates third line of hamburger the opposite direction with JavaScript */
+.hamburger.active .bar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 .bar {
   display: block;
@@ -162,6 +218,8 @@ nav {
   transition: all 0.3s ease-in-out;
   background-color: #10b1a1;
 }
+
+/* hero section styles */
 
 .directions-btn {
   background: #f77c30;
@@ -174,17 +232,6 @@ nav {
   cursor: pointer;
 }
 
-
-/* .tagline-line{
-  position: absolute;
-  top: 160px;
-  left: 30px;
-  background-color: #f77c30;
-  border: #f77c30;
-  padding: 10px 40px;
-  
-} */
-
 .tagline {
   position: absolute;
   top: 155px;
@@ -194,6 +241,11 @@ nav {
   color: white;
   width: 40%;
   text-transform: uppercase;
+}
+
+.tagline.active {
+  display: none;
+
 }
 
 .header-img {
