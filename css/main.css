@@ -220,7 +220,6 @@ li a {
 }
 
 /* hero section styles */
-
 .directions-btn {
   background: #f77c30;
   color: white;
@@ -236,7 +235,7 @@ li a {
   position: absolute;
   top: 155px;
   left: 30px;
-  line-height: 2.25rem;
+  line-height: 2.5rem;
   font-size: 2.25rem;
   color: white;
   width: 40%;
@@ -245,7 +244,6 @@ li a {
 
 .tagline.active {
   display: none;
-
 }
 
 .header-img {

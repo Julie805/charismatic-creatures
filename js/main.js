@@ -30,15 +30,16 @@ const openStatus = document.getElementById('open-status')
 
 function renderHolidayHours() {
   //christmas
-  if(currentMonth === 12 && currentDate === 25) {
+  if (currentMonth === 12 && currentDate === 25) {
     openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)`
   //new years day
-  } elseif (currentMonth === 0 && currentDate === 1){
+  } else if (currentMonth === 0 && currentDate === 1) {
     openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)`
   //fourth of July
-  } elseif (currentMonth === 7 && currentDate === 4){
+  } else if (currentMonth === 7 && currentDate === 4){
     openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
   }
+}
 
 renderHolidayHours()
 
