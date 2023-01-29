@@ -20,12 +20,40 @@ document.querySelectorAll(".nav-link").forEach(function(link) {
   })
 })
 
+const date = new Date() //constructor
+const currentDay = 6//date.getDay() //returns a number 0-6
+const currentHour = 20//date.getHours() // returns military time
+const currentMinutes = date.getMinutes() // returns acutal minutes -- !!!currently not using this variable!!!
 
+//defaults in HTML to open now with 7:00pm close time
+function renderOpenStatus() {
+  const openStatus = document.getElementById('open-status')
+  //Monday
+  if (currentDay === 1) {
+    openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
+  //Tues-Saturday before 11
+  } else if(currentDay > 0 && currentHour < 11) {
+    openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM today`
+  //Tuesday-Sunday at/after 5
+  } else if (currentDay > 0 && currentHour >= 19) {
+    if (currentDay === 6) {
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 12:00 AM tomorrow`
+    } else {
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
+    }
+  //Sunday 
+  } else if (currentDay === 0) {
+    //before noon
+    if (currentHour < 12) {
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 12:00 PM today`
+    //at/after 5
+    } else if (currentHour >= 17) {        
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 PM Tuesday`
+    //12-5 (open)
+    } else {        
+      openStatus.innerHTML = `<span id="open">Open Now</span> - Closing at 5:00 PM today`
+    }
+  }
+}
 
-
-// function getOpenStatus() {
-//   const openStatus = document.getElementById('open-status')
-//   const currentDay = "Sunday"
-//   const currentTime = "9:00"
-//   if currentDay 
-// }
+renderOpenStatus()
