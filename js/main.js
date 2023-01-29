@@ -21,14 +21,29 @@ document.querySelectorAll(".nav-link").forEach(function(link) {
 })
 
 const date = new Date() //constructor
-const currentDay = 6//date.getDay() //returns a number 0-6
-const currentHour = 20//date.getHours() // returns military time
-const currentMinutes = date.getMinutes() // returns acutal minutes -- !!!currently not using this variable!!!
+const currentDay = date.getDay() //returns a number 0-6
+const currentHour = date.getHours() // returns military time
+const currentMonth = date.getMonth()//returns a number 0-11
+const currentDate = date.getDate() //returns acutal day number - aka Jan 19 = 19
+const openStatus = document.getElementById('open-status')
+  //Monday
+
+function renderHolidayHours() {
+  //christmas
+  if(currentMonth === 12 && currentDate === 25) {
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)`
+  //new years day
+  } elseif (currentMonth === 0 && currentDate === 1){
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)`
+  //fourth of July
+  } elseif (currentMonth === 7 && currentDate === 4){
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
+  }
+
+renderHolidayHours()
 
 //defaults in HTML to open now with 7:00pm close time
 function renderOpenStatus() {
-  const openStatus = document.getElementById('open-status')
-  //Monday
   if (currentDay === 1) {
     openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
   //Tues-Saturday before 11
