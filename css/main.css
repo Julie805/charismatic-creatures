@@ -99,6 +99,15 @@ body {
 .img {
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: #10b1a1;
+  cursor: pointer;
+}
+
+
+
 .content-wrapper-header {
   padding: 20px 20px;
 } 
@@ -184,11 +193,7 @@ ul {
   list-style-type: none;
 }
 
-li a {
-  text-decoration: none;
-  color: #10b1a1;
-  
-}
+
 .hamburger {
   display: block;
   cursor: pointer;
@@ -346,8 +351,11 @@ p {
   padding: 50px 0 10px;
 }
 
-h4 {
+address {
   font-size: 1.25rem;
+  color: #10b1a1;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .contact-btn {
@@ -359,6 +367,10 @@ h4 {
   color: white;
   background: #10b1a1;
   cursor: pointer;
+}
+
+.contact-btn a {
+  color: white;
 }
 
 footer{

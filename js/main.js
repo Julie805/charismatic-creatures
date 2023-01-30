@@ -53,7 +53,7 @@ function renderOpenStatus() {
   //Tuesday-Sunday at/after 5
   } else if (currentDay > 0 && currentHour >= 19) {
     if (currentDay === 6) {
-      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 12:00 AM tomorrow`
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 12:00 PM tomorrow`
     } else {
       openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
     }
@@ -64,7 +64,7 @@ function renderOpenStatus() {
       openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 12:00 PM today`
     //at/after 5
     } else if (currentHour >= 17) {        
-      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 PM Tuesday`
+      openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM Tuesday`
     //12-5 (open)
     } else {        
       openStatus.innerHTML = `<span id="open">Open Now</span> - Closing at 5:00 PM today`
