@@ -526,10 +526,84 @@ textarea {
    Media Queries for Responsive Design
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
   /******** Tablet styles Here ********/ 
 
-  /* General styles */ 
+  .header-img {
+    /* width: 100%;  */
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .tagline {
+    top: 175px;
+    line-height: 4rem;
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  p {
+    max-width: 80%;
+    font-size: 1.125rem;
+  }
+
+
+  .services-container {
+    padding-top: 50px;
+    width: 80%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .single-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 48%;
+    padding-bottom: 50px;
+  }
+
+  .single-service:nth-child(5), .single-service:nth-child(6) {
+    padding-bottom: 0px;
+  }
+
+  .services-icons {
+    width: 75px;
+  }
+
+  .services-text {  
+    font-size: 1.125rem;
+  } 
+
+  .body-img {
+    /* width: 100%;
+    padding-bottom: 30px; */
+    height: 500px;
+    object-fit: cover;
+  }
+
+  
+  .hours {
+    width: 340px;
+  }
+  
+  .hours_column1 p {
+    text-align: left;
+    max-width: 100%; 
+  }
+  
+  .hours_column2 p {
+    text-align: right; 
+    max-width: 100%; 
+  }
+
+  .copyright p {
+    max-width: 100%
+  }
+
 
   
 
