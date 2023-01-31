@@ -136,6 +136,7 @@ nav {
 /* logo design */
 .nav-branding-container {
   width: 40%;
+  max-width: 200px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -607,6 +608,7 @@ textarea {
       height: 500px;
       object-fit: cover;
     }
+
     #open-status {
       font-size: 1.25rem;
     }
@@ -628,9 +630,50 @@ textarea {
   
   @media only screen and (min-width: 1024px) {
     /******** Desktop styles Here ********/ 
+
+    .hamburger {
+      display: none;  
+    }
+
+    .nav-menu {   
+      position: fixed;
+      /* left value hides the nav-menu items until activated */
+      right: -100%;
+      top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      padding: 50px 25px;
+      background-color:#c8f9f0;
+      width: 100%;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05rem; 
+      transition: 0.3s;
+    }
+
+    .nav-menu {
+      gap: 40px;
+      position: relative;
+      right: 0;
+      top: 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;  
+      background-color: white;
+      transition: 0s;
+      padding: 15px 25px;
+    }  
   
     .header-img {
       height: 575px; 
+    }
+
+    p {
+      font-size: 1rem;
     }
   
     .services-container {
@@ -648,11 +691,14 @@ textarea {
     }
   
     .body-img-container {
-      width: 40%;
+      width: 48%;
     }
+
+
     .body-img { 
-      height: 600px;
+      height: 720px;
       object-fit: cover; 
+      object-position: right;
       padding: 0;
     }
   
@@ -666,6 +712,19 @@ textarea {
       flex-grow: 1;
       padding-top: 60px;
       /* border: 3px solid black; */
+    }
+
+    #open-status {
+      font-size: 1.125rem;
+    }
+
+
+    .hours_column1 p, .hours_column2 p {
+      line-height: 1.75rem;
+    }
+
+    address {
+      font-size: 1.25rem;
     }
   
   }
