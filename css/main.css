@@ -236,7 +236,7 @@ ul {
   cursor: pointer;
 }
 
-.tagline {
+/* .tagline {
   position: absolute;
   top: 155px;
   left: 30px;
@@ -249,7 +249,7 @@ ul {
 
 .tagline.active {
   display: none;
-}
+} */
 
 .header-img {
   width: 100%; 
@@ -529,118 +529,148 @@ textarea {
    Media Queries for Responsive Design
    ========================================================================== */
 
-@media only screen and (min-width: 700px) {
-  /******** Tablet styles Here ********/ 
-
-  .header-img {
-    height: 500px;
-    object-fit: cover;
-  }
-
-  .tagline {
-    top: 175px;
-    line-height: 4rem;
-    font-size: 3rem;
-    width: 100%;
-  }
-
-  p {
-    max-width: 80%;
-    font-size: 1.125rem;
-  }
-
-
-  .services-container {
-    padding-top: 50px;
-    width: 80%;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 20px;
-  }
-
-  .single-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 48%;
-    padding-bottom: 50px;
-  }
-
-  .single-service:nth-child(5), .single-service:nth-child(6) {
-    padding-bottom: 0px;
-  }
-
-  .services-icons {
-    width: 75px;
-  }
-
-  .services-text {  
-    font-size: 1.125rem;
-  } 
-
-  .body-img {
-    height: 500px;
-    object-fit: cover;
-  }
-
+   @media only screen and (min-width: 700px) {
+    /******** Tablet styles Here ********/ 
   
-  .hours {
-    width: 340px;
+    .header-img {
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .title {
+      font-size: 1.75rem;
+      padding: 15px;
+    }
+  
+    .description {
+      line-height: 1.75rem;
+      width: 70%;
+    }
+    /* this is causing overflow issues
+    .tagline {
+       top: 175px;
+      line-height: 4rem;
+      font-size: 3rem;
+      width: 100%;
+      
+    } */
+  
+    p {
+      font-size: 1.125rem;
+    }
+
+    .description {
+      width: 80%;
+      max-width: 650px;
+
+    }
+
+    .hero-btn, .contact-btn {
+      padding: 20px 80px;
+    }
+
+    .hero-btn {
+      margin: 40px 0 25px;
+    }
+  
+    .services-container {
+      padding-top: 50px;
+      width: 80%;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+    }
+  
+    .single-service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 48%;
+      padding-bottom: 50px;
+    }
+  
+    .single-service:nth-child(5), .single-service:nth-child(6) {
+      padding-bottom: 0px;
+    }
+  
+    .services-icons {
+      width: 75px;
+    }
+  
+    .services-text {  
+      font-size: 1.125rem;
+    } 
+  
+    .body-img {
+      height: 500px;
+      object-fit: cover;
+    }
+    #open-status {
+      font-size: 1.25rem;
+    }
+
+    .hours {
+      width: 370px;
+      margin-top: 20px; 
+    }
+
+    .hours_column1 p, .hours_column2 p {
+      line-height: 1.75rem;
+    }
+
+    address {
+      font-size: 1.5rem;
+    }
+    
   }
   
-  .hours_column1 p {
-    text-align: left;
-    max-width: 100%; 
+  @media only screen and (min-width: 1024px) {
+    /******** Desktop styles Here ********/ 
+  
+    .header-img {
+      height: 575px; 
+    }
+  
+    .services-container {
+      padding-top: 70px;
+      width: 75%;
+    }
+  
+    .single-service {
+      width: 30%;
+      padding-bottom: 50px;
+    }
+  
+    .single-service:nth-child(5), .single-service:nth-child(6) {
+      padding-bottom: 50px;
+    }
+  
+    .body-img-container {
+      width: 40%;
+    }
+    .body-img { 
+      height: 600px;
+      object-fit: cover; 
+      padding: 0;
+    }
+  
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .info-desktop {
+      background-color: rgb(250, 239, 239);
+      flex-grow: 1;
+      padding-top: 60px;
+      /* border: 3px solid black; */
+    }
+  
   }
   
-  .hours_column2 p {
-    text-align: right; 
-    max-width: 100%; 
-  }
-
-  .copyright p {
-    max-width: 100%
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /******** Desktop styles Here ********/ 
-
-  .header-img {
-    height: 575px; 
-  }
-
-  .services-container {
-    padding-top: 70px;
-    width: 75%;
-  }
-
-  .single-service {
-    width: 30%;
-    padding-bottom: 50px;
-  }
-
-  .single-service:nth-child(5), .single-service:nth-child(6) {
-    padding-bottom: 50px;
-  }
-
-  .body-img-container {
-    width: 40%
-  }
-  .body-img { 
-    max-height: 700px;
-    object-fit: cover; 
-  }
-
-  .info-section {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-
+  
 
 
   
@@ -719,4 +749,4 @@ textarea {
     page-break-after: avoid;
   }
 }
-}
+
