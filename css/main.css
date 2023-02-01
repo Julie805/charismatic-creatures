@@ -435,10 +435,31 @@ textarea {
   text-transform: uppercase;
 }
 
-.about-text p {
-  text-align: left;
+
+/* about page */
+
+.hero-area {
+  /* display: flex;
+  justify-content: center;
+  flex-flow: row wrap; */
+  background: url('../img/storefront.jpeg') center no-repeat #c8f9f0;;
+  background-size: cover;
+  min-height: 500px;
 }
 
+.hero-area h1 {
+  font-size: 2.75rem;
+  font-weight: 700; 
+  text-transform: uppercase;
+  color: white;
+  padding: 30px;
+}
+
+
+.about-text p {
+  text-align: left;
+  max-width: 650px;
+}
 
 
 
@@ -625,7 +646,16 @@ textarea {
     address {
       font-size: 1.5rem;
     }
-    
+   /* about page - tablet */
+
+   .hero-area h1 {
+    font-size: 3rem;
+    padding: 30px 50px;
+
+   .about-text p {
+    line-height: 2rem;
+    padding-top: 20px; 
+    }
   }
   
   @media only screen and (min-width: 1024px) {
