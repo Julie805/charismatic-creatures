@@ -439,9 +439,6 @@ textarea {
 /* about page */
 
 .hero-area {
-  /* display: flex;
-  justify-content: center;
-  flex-flow: row wrap; */
   background: url('../img/storefront.jpeg') center no-repeat #c8f9f0;;
   background-size: cover;
   min-height: 500px;
@@ -455,10 +452,28 @@ textarea {
   padding: 30px;
 }
 
+/* .background-img {
+  background: url('../img/lizard-skin.png') center no-repeat #c8f9f0;
+  background-size: cover;
+} */
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
 
 .about-text p {
   text-align: left;
-  max-width: 650px;
+  max-width: 500px;
+}
+
+.about-img {
+  width: 100%;
+  margin: 35px 0 20px;
+  border:#10b1a1 10px solid;
 }
 
 
@@ -646,15 +661,31 @@ textarea {
     address {
       font-size: 1.5rem;
     }
+
    /* about page - tablet */
 
    .hero-area h1 {
     font-size: 3rem;
     padding: 30px 50px;
+   }
+
+   .about-img {
+    width: 450px;
+    height: 450px;
+    margin: 15px 0 20px; 
+    object-fit: cover; 
+  }
+
+  .flex{
+    padding: 0 20px;
+  }
+
+   .about-text {
+    padding: 20px 0 30px;
+   }
 
    .about-text p {
     line-height: 2rem;
-    padding-top: 20px; 
     }
   }
   
@@ -756,6 +787,28 @@ textarea {
     address {
       font-size: 1.25rem;
     }
+
+    /* about page - desktop */
+
+    .flex {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 30px 50px;
+    }
+
+    .about-img {
+      width: 400px;
+      height: 400px;
+      margin: 15px 0 20px; 
+      object-fit: cover; 
+    }
+
+    .about-text {
+      padding: 5px 0 30px;
+     }
+      
+    
   
   }
   
