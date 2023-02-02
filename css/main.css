@@ -711,11 +711,11 @@ textarea {
    .about-text p {
     line-height: 2rem;
     }
+    
     /* contact page - tablet */
 
     form {
       width: 70%;
-      max-width: 500px;
     }
     
     input, textarea {
@@ -856,16 +856,24 @@ textarea {
     .contact-flex {
       display: flex;
       justify-content: center;
+      max-width: 1300px;
+      margin: 0 auto;
     }
 
     iframe {
       width: 450px;
       height: 450px;
-      margin: 100px 0 0 50px;
+      margin: 130px 0 0 100px; 
+      
     }
 
     .contact-desktop {
       flex-grow: 1;
+    }
+
+    .content-wrapper-desktop {
+      margin: 50px 0;
+      padding:0;
     }
 
      form {
