@@ -174,7 +174,7 @@ nav {
   background-color:#c8f9f0;
   width: 100%;
   color: white;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .05rem; 
   transition: 0.3s;
@@ -188,6 +188,7 @@ nav {
 /* transition effect*/
 .nav-link {
   transition: 0.7s ease;
+  font-weight: 400;
 }
 
 ul {
@@ -594,13 +595,18 @@ textarea {
    @media only screen and (min-width: 700px) {
     /******** Tablet styles Here ********/ 
   
+    .highlight-bar {
+      font-size: 1.125rem;
+    }
+
     .header-img {
       height: 500px;
       object-fit: cover;
     }
 
     .title {
-      font-size: 1.75rem;
+      font-size: 2.25rem;
+      font-weight: 500;
       padding: 15px;
     }
   
@@ -608,15 +614,7 @@ textarea {
       line-height: 1.75rem;
       width: 70%;
     }
-    /* this is causing overflow issues
-    .tagline {
-       top: 175px;
-      line-height: 4rem;
-      font-size: 3rem;
-      width: 100%;
-      
-    } */
-  
+    
     p {
       font-size: 1.125rem;
     }
@@ -755,7 +753,7 @@ textarea {
       background-color:#c8f9f0;
       width: 100%;
       color: white;
-      font-weight: 700;
+      font-weight: 400;
       text-transform: uppercase;
       letter-spacing: .05rem; 
       transition: 0.3s;
@@ -773,9 +771,20 @@ textarea {
       transition: 0s;
       padding: 15px 25px;
     }  
+
+    .highlight-bar {
+      font-size: 1.5rem;
+      letter-spacing: .05rem; 
+      padding: 10px;
+    }
   
     .header-img {
-      height: 575px; 
+      height: 575px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      padding: 15px;
     }
 
     p {
@@ -817,7 +826,6 @@ textarea {
       background-color: rgb(250, 239, 239);
       flex-grow: 1;
       padding-top: 60px;
-      /* border: 3px solid black; */
     }
 
     #open-status {
