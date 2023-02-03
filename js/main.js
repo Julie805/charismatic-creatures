@@ -73,3 +73,22 @@ function renderOpenStatus() {
 }
 
 renderOpenStatus()
+
+
+const getMemorialDay = (year) => {
+  let lastMondayInMay = new Date(year, 4, 31);
+  let dayOfWeek = lastMondayInMay.getDay();
+  while (dayOfWeek !== 1) {
+    lastMondayInMay.setDate(lastMondayInMay.getDate() - 1);
+    dayOfWeek = lastMondayInMay.getDay();
+  }
+  return lastMondayInMay;
+};
+
+
+
+for (let i = 0; i < 10; i++) {
+  let year = new Date().getFullYear() + i;
+  let memorialDay = getMemorialDay(year);
+  console.log(`Memorial Day in ${year}: ${memorialDay.toDateString()}`);
+}
