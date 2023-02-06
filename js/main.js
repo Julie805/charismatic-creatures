@@ -24,9 +24,28 @@ const date = new Date() //constructor
 const currentDay = date.getDay() //returns a number 0-6
 const currentHour = date.getHours() // returns military time
 const currentMonth = date.getMonth()//returns a number 0-11
+const currentYear = date.getFullYear()//returns a number 0-11
 const currentDate = date.getDate() //returns acutal day number - aka Jan 19 = 19
+let easter = ""
+let laborDay = ""
+let memorialDay = "" //gets day number
+let thanksgiving = ""
 const openStatus = document.getElementById('open-status')
-  //Monday
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'ac56212e56msh17a6ef6e9a9957fp16704bjsn4cd33f0679bf',
+		'X-RapidAPI-Host': 'public-holiday.p.rapidapi.com'
+	}
+}
+fetch(`https://public-holiday.p.rapidapi.com/${currentYear}/US`, options)
+    .then(response => response.json())
+    .then(data => {
+      easter = parseInt(data[4].date.slice(-2))+2 //gets good friday date and adds 2 days
+      memorialDay = parseInt(data[5].date.slice(-2)) 
+      laborDay = parseInt(data[8].date.slice(-1)) //first monday of may
+      thanksgiving = parseInt(data[11].date.slice(-2))
+    }) 
 
 function renderHolidayHours() {
   //christmas
@@ -38,13 +57,15 @@ function renderHolidayHours() {
   //fourth of July
   } else if (currentMonth === 7 && currentDate === 4){
     openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
+  //memorial day
   }
-}
+} 
 
 renderHolidayHours()
 
 //defaults in HTML to open now with 7:00pm close time
 function renderOpenStatus() {
+  //Monday
   if (currentDay === 1) {
     openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
   //Tues-Saturday before 11
@@ -74,21 +95,32 @@ function renderOpenStatus() {
 
 renderOpenStatus()
 
-
-const getMemorialDay = (year) => {
-  let lastMondayInMay = new Date(year, 4, 31);
-  let dayOfWeek = lastMondayInMay.getDay();
-  while (dayOfWeek !== 1) {
-    lastMondayInMay.setDate(lastMondayInMay.getDate() - 1);
-    dayOfWeek = lastMondayInMay.getDay();
-  }
-  return lastMondayInMay;
-};
+// fetch ("https://public-holiday.p.rapidapi.com/2023/US")
+//   .then(response => response.json())
+//   .then(data => console.log(data))
 
 
 
-for (let i = 0; i < 10; i++) {
-  let year = new Date().getFullYear() + i;
-  let memorialDay = getMemorialDay(year);
-  console.log(`Memorial Day in ${year}: ${memorialDay.toDateString()}`);
-}
+
+
+// /PublicHolidays/{Year}/{CountryCode}
+
+
+// const getMemorialDay = function(year) {
+//   let lastMondayInMay = new Date(year, 4, 31);
+//   let dayOfWeek = lastMondayInMay.getDay();
+//   while (dayOfWeek !== 1) {
+//     lastMondayInMay.setDate(lastMondayInMay.getDate() - 1);
+//     dayOfWeek = lastMondayInMay.getDay();
+//   }
+//   return lastMondayInMay;
+// };
+
+
+
+// for (let i = 0; i < 10; i++) {
+//   let year = new Date().getFullYear() + i;
+//   let memorialDay = getMemorialDay(year);
+//   console.log(`Memorial Day in ${year}: ${memorialDay.toDateString()}`);
+// }
+
