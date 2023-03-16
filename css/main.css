@@ -177,7 +177,7 @@ nav {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .05rem; 
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 /* reveals the nav-menu items with JavaScript */
@@ -185,16 +185,9 @@ nav {
   right: 0;
 }
 
-/* transition effect*/
-.nav-link {
-  transition: 0.7s ease;
-  font-weight: 400;
-}
-
 ul {
   list-style-type: none;
 }
-
 
 .hamburger {
   display: block;
@@ -221,8 +214,9 @@ ul {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(0,0,0);
   background-color: #10b1a1;
 }
 

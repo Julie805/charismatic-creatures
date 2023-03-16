@@ -15,6 +15,7 @@ document.querySelectorAll(".nav-link").forEach(function(link) {
   link.addEventListener("click", function() {
     hamburger.classList.remove("active")
     navMenu.classList.remove("active")
+    //needed?
     document.querySelector('.close-icon').style.display ='none'
     document.querySelector('.menu-icon').style.display ='block'
   })
@@ -23,13 +24,15 @@ document.querySelectorAll(".nav-link").forEach(function(link) {
 const date = new Date() //constructor
 const currentDay = date.getDay() //returns a number 0-6
 const currentHour = date.getHours() // returns military time
-const currentMonth = date.getMonth()//returns a number 0-11
-const currentYear = date.getFullYear()//returns a number 0-11
-const currentDate = date.getDate() //returns acutal day number - aka Jan 19 = 19
-let easter = ""
+const currentMonth = 11//date.getMonth()//returns a number 0-11
+const currentYear = date.getFullYear()//returns the current year
+const currentDate = 23//date.getDate() //returns acutal day number - aka Jan 19 = 19
+//individual holiday variables return actual day number only (no month) unless noted in name
+let easterDay = ""
+let easterMonth = ""
 let laborDay = ""
-let memorialDay = "" //gets day number
-let thanksgiving = ""
+let memorialDay = "" 
+let thanksgivingDay = ""
 const openStatus = document.getElementById('open-status')
 const options = {
 	method: 'GET',
@@ -41,11 +44,14 @@ const options = {
 fetch(`https://public-holiday.p.rapidapi.com/${currentYear}/US`, options)
     .then(response => response.json())
     .then(data => {
-      easter = parseInt(data[4].date.slice(-2))+2 //gets good friday date and adds 2 days
+      easterDay = parseInt(data[4].date.slice(-2))+2 //gets good friday date and adds 2 days
+      easterMonth = parseInt(data[4].date.slice(-4)) // returns the number of the month
       memorialDay = parseInt(data[5].date.slice(-2)) 
       laborDay = parseInt(data[8].date.slice(-1)) //first monday of may
-      thanksgiving = parseInt(data[11].date.slice(-2))
+      thanksgivingDay = parseInt(data[11].date.slice(-2))
     }) 
+
+
 
 function renderHolidayHours() {
   //christmas
@@ -57,17 +63,33 @@ function renderHolidayHours() {
   //fourth of July
   } else if (currentMonth === 7 && currentDate === 4){
     openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
+  //easter - need to create a variable for easter month too
+  } else if (currentMonth === easterMonth && currentDate === easterDay) {
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
   //memorial day
+  } else if (currentMonth === 5 && currentDate === memorialDay) {
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
+  //labor day
+  } else if (currentMonth === 9 && currentDate === laborDay) {
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)` 
+    (console.log("laborday"))
+  //thanksgiving day
+  } else if (currentMonth === 11 && currentDate === thanksgivingDay) {
+    openStatus.innerHTML =`<span id="closed">Closed Today</span> - (Holiday Closure)`
+    console.log("thanksgiving")
+  } else {
+    renderOpenStatus()
   }
-} 
+}
 
-renderHolidayHours()
+  renderHolidayHours()
 
-//defaults in HTML to open now with 7:00pm close time
+  //defaults in HTML to open now with 7:00pm close time
 function renderOpenStatus() {
   //Monday
   if (currentDay === 1) {
     openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM tomorrow`
+    console.log(currentDate, laborDay)
   //Tues-Saturday before 11
   } else if(currentDay > 0 && currentHour < 11) {
     openStatus.innerHTML = `<span id="closed">Closed Now</span> - Open at 11:00 AM today`
@@ -92,35 +114,5 @@ function renderOpenStatus() {
     }
   }
 }
-
-renderOpenStatus()
-
-// fetch ("https://public-holiday.p.rapidapi.com/2023/US")
-//   .then(response => response.json())
-//   .then(data => console.log(data))
-
-
-
-
-
-// /PublicHolidays/{Year}/{CountryCode}
-
-
-// const getMemorialDay = function(year) {
-//   let lastMondayInMay = new Date(year, 4, 31);
-//   let dayOfWeek = lastMondayInMay.getDay();
-//   while (dayOfWeek !== 1) {
-//     lastMondayInMay.setDate(lastMondayInMay.getDate() - 1);
-//     dayOfWeek = lastMondayInMay.getDay();
-//   }
-//   return lastMondayInMay;
-// };
-
-
-
-// for (let i = 0; i < 10; i++) {
-//   let year = new Date().getFullYear() + i;
-//   let memorialDay = getMemorialDay(year);
-//   console.log(`Memorial Day in ${year}: ${memorialDay.toDateString()}`);
-// }
+ 
 
