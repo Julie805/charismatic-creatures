@@ -405,6 +405,23 @@ footer{
   min-height: 500px;
 }
 
+.hero-area__about {
+  background: url('../img/about-pets.jpg') center no-repeat #c8f9f0;;
+  background-size: cover;
+  min-height: 500px;
+
+}
+
+.hero-area__about h1 {
+  font-size: 2.75rem;
+  font-weight: 700; 
+  text-transform: uppercase;
+  color: white;
+  padding: 30px;
+  margin: 0;
+  
+}
+
 .hero-area h1 {
   font-size: 2.75rem;
   font-weight: 700; 
